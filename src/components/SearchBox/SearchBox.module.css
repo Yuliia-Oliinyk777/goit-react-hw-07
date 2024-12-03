@@ -1,0 +1,25 @@
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-left: 80px;
+}
+.searchLabel {
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.search {
+  border: 2px solid #01010f;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  outline: transparent;
+  padding: 12px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.search:focus,
+.search:hover,
+.search:active {
+  border: 3px solid #3a53d1;
+}

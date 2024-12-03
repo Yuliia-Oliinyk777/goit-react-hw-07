@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.listItem {
+  width: calc((100% - 48px) / 4);
+}
+.message {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 32px;
+}
