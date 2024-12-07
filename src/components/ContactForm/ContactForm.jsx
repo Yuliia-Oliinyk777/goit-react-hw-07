@@ -6,13 +6,11 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 
-import { nanoid } from '@reduxjs/toolkit';
-
 const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    const newContact = { id: nanoid(), ...values };
+    const newContact = { ...values };
     dispatch(addContact(newContact));
     actions.resetForm();
   };
