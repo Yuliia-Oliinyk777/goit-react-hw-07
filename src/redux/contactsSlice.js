@@ -2,9 +2,6 @@ import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { fetchContacts, deleteContact, addContact } from './contactsOps';
 const initialState = {
   items: [],
-  filters: {
-    name: '',
-  },
   loading: false,
   error: null,
 };
@@ -12,11 +9,6 @@ const initialState = {
 const slice = createSlice({
   name: 'contacts',
   initialState,
-  reducers: {
-    changeFilter: (state, action) => {
-      state.filters.name = action.payload;
-    },
-  },
   extraReducers: builder => {
     builder
       .addCase(fetchContacts.fulfilled, (state, action) => {
@@ -63,5 +55,4 @@ const slice = createSlice({
   },
 });
 
-export const { changeFilter } = slice.actions;
 export const contactsReducer = slice.reducer;
