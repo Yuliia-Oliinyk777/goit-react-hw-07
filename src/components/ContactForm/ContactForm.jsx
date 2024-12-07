@@ -1,5 +1,5 @@
 import style from './ContactForm.module.css';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 

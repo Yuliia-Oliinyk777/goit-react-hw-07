@@ -3,7 +3,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background-color: #ffffff;
+  background-color: #343232;
+  color: #faf9f9;
   min-height: 100vh;
 
   font-style: normal;

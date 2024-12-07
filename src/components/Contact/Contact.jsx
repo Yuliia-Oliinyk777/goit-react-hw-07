@@ -2,8 +2,9 @@ import { IoPersonSharp } from 'react-icons/io5';
 import { MdLocalPhone } from 'react-icons/md';
 
 import style from './Contact.module.css';
+
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContact } from '../../redux/contactsOps';
 
 const Contact = ({ id, name, phone }) => {
   const dispatch = useDispatch();

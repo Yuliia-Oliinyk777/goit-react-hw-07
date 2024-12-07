@@ -10,13 +10,15 @@
   font-weight: 400;
 }
 .search {
-  border: 2px solid #01010f;
+  border: 2px solid #707070;
   border-radius: 4px;
   margin-bottom: 16px;
   outline: transparent;
   padding: 12px;
   font-size: 24px;
   font-weight: 400;
+  background-color: inherit;
+  color: #ffffff;
 }
 .search:focus,
 .search:hover,

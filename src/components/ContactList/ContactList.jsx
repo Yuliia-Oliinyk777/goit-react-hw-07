@@ -1,18 +1,20 @@
 import { useSelector } from 'react-redux';
 import Contact from '../Contact/Contact';
 import style from './ContactList.module.css';
+import {
+  selectError,
+  selectFilteredContacts,
+  selectLoading,
+} from '../../redux/selectors';
+
 const ContactList = () => {
-  const selectContacts = useSelector(state => state.contacts.items);
-
-  const selectNameFilter = useSelector(state => state.filters.filters.name);
-
-  const filteredContacts = selectContacts.filter(contact =>
-    contact.name.toLowerCase().includes(selectNameFilter.toLowerCase())
-  );
+  const filteredContacts = useSelector(selectFilteredContacts);
+  const error = useSelector(selectError);
+  const loading = useSelector(selectLoading);
 
   return (
     <>
-      {filteredContacts.length > 0 ? (
+      {filteredContacts.length > 0 && !error && !loading ? (
         <ul className={style.list}>
           {filteredContacts.map(contact => (
             <li className={style.listItem} key={contact.id}>
@@ -25,7 +27,8 @@ const ContactList = () => {
           ))}
         </ul>
       ) : (
-        <p className={style.message}>Сontacts not found</p>
+        !error &&
+        !loading && <p className={style.message}>Сontacts not found</p>
       )}
     </>
   );
